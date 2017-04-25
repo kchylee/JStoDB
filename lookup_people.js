@@ -32,7 +32,7 @@ client.connect((err, result) => {
     let birthmonth = result.rows[0].birthdate.getUTCMonth() + 1;
     let birthday = result.rows[0].birthdate.getUTCDate();
     let resultLength = result.rowCount;
-    console.log(`Found ${result.rowCount} person(s) by the name '${args}':\n${id}: ${first} ${last} born ${birthyear}-${birthmonth}-${birthday}`);
+    console.log(`Found ${resultLength} person(s) by the name '${args}':\n${id}: ${first} ${last} born ${birthyear}-${birthmonth}-${birthday}`);
     }
     client.end();
   })
